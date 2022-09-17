@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import Products from "./Components/Products/Products";
+import Products from "./Components/products/Products";
 import Carts from "./Components/Carts/Carts";
 import Header from "./Components/Header/Header";
 import  store  from "./redux/store";
