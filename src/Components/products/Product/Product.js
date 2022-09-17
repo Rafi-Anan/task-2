@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React from 'react'
 import { useDispatch,  } from 'react-redux';
 import { decrementStock } from '../../../redux/Products/Actions';
 import { addToCart } from './../../../redux/Carts/actions';
@@ -7,13 +7,7 @@ import { addToCart } from './../../../redux/Carts/actions';
 const Product = ({ product}) => {
 const dispatch = useDispatch()
 const {title, price, quantity, id} = product;
-const [ disabled, setDisabled] = useState(false)
 
-const buttonStatus = () => {
-  return 
-}
-
-   
 const handleProduct = (id) => { 
     dispatch(decrementStock(id)) 
 
@@ -35,7 +29,7 @@ const handleProduct = (id) => {
         <div className="text-lg font-semibold">
             <button   
                 className= "focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 rounded-full inline-flex items-center"
-                disabled={quantity <= 1 ?  true: false}
+                disabled={quantity ===0 ?  true: false}
 
                 onClick={() => {
                     handleProduct(id);
