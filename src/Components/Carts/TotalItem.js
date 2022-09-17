@@ -8,7 +8,6 @@ const TotalItem = () => {
     const priceQuantity = carts.map((item) => {
      return item.cartQuantity;
     })
- console.log(priceQuantity)
  
     const totalItem = priceQuantity.reduce((initialP, currentP) => {
      return initialP + currentP;

@@ -9,7 +9,6 @@ const Cart = ({ cart }) => {
 
     const {title, cartQuantity, id, price, quantity} = cart;
     const dispatch = useDispatch()
-    console.log(quantity)
  
      
 
